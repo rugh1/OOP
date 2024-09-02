@@ -4,3 +4,5 @@ class Square(Shape):
         super().__init__(side*side, side<<2) 
         self.side = side
 
+    def __add__(self, shape:Shape) -> Shape:
+        return Shape(self.area + shape.area, self.perimeter + shape.perimeter)
