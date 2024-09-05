@@ -22,6 +22,7 @@ class Container:
         self.shapes = []
 
     def generate(self, x: int) -> None:
+        assert (type(x) is int or x > 0, 'generate function takes positive integers')
         for i in range(x):
             self.shapes.append(Container._CREATE_FUNCTIONS[random.randint(0, 2)]())
 

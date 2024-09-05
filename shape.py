@@ -1,5 +1,8 @@
 class Shape:
-    def __init__(self, area, perimeter, color='No color') -> None:
+    def __init__(self, area: float | int, perimeter: float | int, color='No color') -> None:
+        assert (type(area) is int or type(area) is float or area < 0, 'area should be a positive number ')
+        assert (type(perimeter) is int or type(perimeter) is float or perimeter < 0, 'perimeter need a positive number')
+
         self.area = area
         self.perimeter = perimeter
         self.color = color
